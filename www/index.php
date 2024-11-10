@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="menu">
-        <a href="index.php">Главная</a>
+        <a href="http://localhost">Главная</a>
         <a href="donat.html">Донат</a>
         <a href="#">Отзывы</a>
     </div>

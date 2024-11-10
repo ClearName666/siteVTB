@@ -2,7 +2,7 @@
 // Получите данные из формы
 $amount = floatval($_POST['amount']);  // Сумма доната
 
-// Укажите ваши client_id и client_secret
+// client_id и client_secret
 $client_id = 'team094';
 $client_secret = 'YzIQ1ScSQAO0eT6YYxwSWNxRoM8aVavM';
 $auth_url = 'https://auth.bankingapi.ru/auth/realms/kubernetes/protocol/openid-connect/token';
@@ -35,7 +35,8 @@ function getAccessToken($client_id, $client_secret, $auth_url) {
 $access_token = getAccessToken($client_id, $client_secret, $auth_url);
 
 if (!$access_token) {
-    die('Ошибка при получении access_token');
+    echo "<script>alert('Ошибка при получении access_token');</script>";
+    exit;
 }
 
 // Создание ордера
@@ -47,7 +48,7 @@ $order_data = [
         "code" => "RUB"
     ],
     "expire" => date(DATE_ISO8601, strtotime("+20 minutes")),
-    "returnUrl" => "https://yourwebsite.com/thankyou", // URL возврата после оплаты
+    "returnUrl" => "http://localhost:80", // URL возврата после оплаты
 ];
 
 $ch = curl_init();
@@ -69,5 +70,6 @@ if (isset($response_data['object']['payUrl'])) {
     header("Location: " . $response_data['object']['payUrl']);
     exit;
 } else {
-    echo "Ошибка при создании ордера. Пожалуйста, попробуйте позже.";
+    echo "<script>alert('Ошибка при создании ордера. Пожалуйста, попробуйте позже.');</script>";
 }
+?>
