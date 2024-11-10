@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="donat.css">
+</head>
+<body>
+    <div class="header">
+        <h1>MK IRNTU</h1>
+        <h2>Поддержите наш проект</h2>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="donat.html">Донат</a>
+        <a href="#">Отзывы</a>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="content">
+            <h3>Сделать донат</h3>
+            <form action="process_donation.php" method="POST">
+                <div class="input-group">
+                    <input type="number" name="amount" placeholder="Введите сумму (в рублях)" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit" id="pay">Оплатить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>ООО "ГДЗ МАШИНКА"</p>
+    </div>
+</body>
+</html>

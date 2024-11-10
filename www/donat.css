@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+    background-image: url(img/ФОН.png);
+}
+.header {
+    background: linear-gradient(90deg, #2079f1, #8f3ba0);
+    padding: 20px;
+    text-align: center;
+}
+.header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+.header h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.menu {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 500px;
+    background-color: #000;
+    width: 500px;
+    height: 116px;
+    border-radius: 0 0 50px 50px;
+}
+.menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 24px;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    text-align: center;
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+.content h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group input {
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.input-group input::placeholder {
+    color: #ccc;
+}
+.input-group button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #2079f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.input-group button:hover {
+    background-color: #1059c1;
+}
+.footer {
+    background: linear-gradient(90deg, #2079f1, #8f3ba0);
+    padding: 20px;
+    text-align: center;
+}
+.footer p {
+    font-size: 14px;
+}
